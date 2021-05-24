@@ -3,7 +3,6 @@
 *{
     margin:0;
     padding:0;
-    overflow:hidden;
     box-sizing: border-box;
     
 }
@@ -49,10 +48,11 @@ body{
 }
 .container{
     width:50%;
-    height:70%;
+    min-height:70%;
     background-color:#fff;
     border-radius:20px;
     box-shadow:0 0 7px rgba(0,0,0,0.5);
+    overflow:scroll;
     
 }
 .infor{
@@ -117,4 +117,42 @@ body{
 }
 .flex-box > div:nth-child(2) p{
     width:90%;
+}
+
+@media only screen and (max-width:375px) {
+    .container{
+        width:80%;
+        height:80%;
+        border-radius:5px;
+    }
+    .infor{
+        padding:1rem;
+    }
+    .infor h1{
+        font-size:1.4rem;
+    }
+    .infor h3{
+        font-size:1rem;
+        margin:10px 0;
+    }
+    .infor p{
+        line-height:25px;
+    }
+    .flex-box{
+        display:block;
+        
+    }
+    .flex-box > div{
+        padding:1rem;
+        
+    }
+    .flex-box > div:nth-child(1){
+        width:100%;
+        padding-bottom:2rem;
+    }
+    .flex-box > div:nth-child(2){
+        width:100%;
+        padding-bottom:2rem;
+    }
+
 }
